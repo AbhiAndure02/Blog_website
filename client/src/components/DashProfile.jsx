@@ -1,7 +1,7 @@
 import { TextInput, Button, Alert, Modal, ModalBody } from 'flowbite-react'
 import React, { useEffect, useRef } from 'react'
 import {useSelector} from 'react-redux'
-const { theme } = useSelector((state) => state.theme);
+
 import { useState } from 'react'
 import {getDownloadURL, getStorage, ref,  uploadBytesResumable} from 'firebase/storage'
 import {app} from '../firebase'
@@ -223,14 +223,14 @@ export default function DashProfile() {
 
        <Modal show ={showModel} onClose={()=>setShowModel(false)} popup size='sm'>
         <Modal.Header />
-        <ModalBody className={theme}>
+        <ModalBody >
             <div className="text-center">
                 <HiOutlineExclamationCircle className='h-14 w-14 text-gray-400 dark:text-gray-200 mb-4 mx-auto'/>
                 <h2 className='mb-5 text-lg text-gray-500 dark:text-gray-200'>
                     Are you sure you  want delete your account?
                 </h2>
                 <div className="flex justify-between">
-                <Button color='failure' onClick={handleDelete}>Delete</Button>
+                <Button color='failure' onClick={handleDelete}>Delete here</Button>
                 <Button onClick={()=>setShowModel(false)}>cancel</Button>
                 </div>
             </div>
