@@ -230,7 +230,7 @@ export default function DashProfile() {
                     Are you sure you  want delete your account?
                 </h2>
                 <div className="flex justify-between">
-                <Button color='failure' onClick={handleDelete}>Delete here</Button>
+                <Button color='failure' onClick={handleDelete}>Delete</Button>
                 <Button onClick={()=>setShowModel(false)}>cancel</Button>
                 </div>
             </div>
