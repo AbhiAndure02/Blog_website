@@ -15,7 +15,7 @@ const postSchema = new mongoose.Schema(
             required: true,
             unique: true,
         }, 
-        imgage:{
+        image:{
             type: String,
             default:'https://bloggerspassion.com/wp-content/uploads/2019/12/best-programming-blogs.jpg',
 
