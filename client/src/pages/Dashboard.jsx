@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom"
 import DashSideBar from "../components/DashSideBar";
 import DashProfile from "../components/DashProfile";
+import DashPost from "../components/DashPost";
 
 
 export default function Dashboard() {
@@ -23,6 +24,8 @@ export default function Dashboard() {
           </div>     
           {/*profil ... */} 
           {tab === 'profile' && <DashProfile/>}
+          {/* post */}
+          {tab=== 'posts' &&<DashPost />}
     </div>
   )
 }
