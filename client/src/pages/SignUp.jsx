@@ -45,8 +45,8 @@ export default function SignUp() {
         {/*left size */}
         <div className="flex-1">
         <Link to='/' className=' font-bold dark:text-white text-4xl'>
-      <span className='px-2 py-1 bg-gradient-to-r from-indigo-600 via-purple-400 to-pink-700 rounded-lg text-white '>Blog</span>
-      Here
+        <span className='px-2 py-1 bg-gradient-to-r from-red-400 via-purple-100 to-pink-9000  text-gray-900 rounded-md border-y-2 border-gray-400'>BlogHere</span>
+      .com
     </Link>
   <p className='mt-5 text-sm'>This is a Blog website you can sign up here to access all the blog.
   </p>
@@ -58,7 +58,7 @@ export default function SignUp() {
               <Label value='Your username' />
               <TextInput
               type='text'
-              className='border-b-2 '
+              className='border-b-2 border-gray-700 '
               placeholder='Username'
               id='username' 
               onChange={handleChange}
@@ -70,23 +70,25 @@ export default function SignUp() {
               <TextInput
               type='email'
               placeholder='Email'
+              className='border-b-2 border-gray-700 '
               id='email' 
               onChange={handleChange}
               
                />
             </div>
             <div className="m-1">
-              <Label value='Your username' />
+              <Label value='Your Password' />
               <TextInput
               type='password'
               placeholder='Password'
+              className='border-b-2 border-gray-700 '
               id='password'
               onChange={handleChange}
               
              
                />
             </div>
-            <Button type='submit' disabled={loading}> 
+            <Button type='submit' disabled={loading} gradientDuoTone="orangeToBlue"> 
             {
               loading ? (
                 <>
@@ -94,7 +96,7 @@ export default function SignUp() {
                 <span className='pl-3'>loading...</span>
                 </>
                 
-              ) : 'SignUp'
+              ) : 'Sign Up'
             }
             </Button>
             <OAuth />

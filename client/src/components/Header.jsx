@@ -35,8 +35,8 @@ export default function Header() {
   return (
    <Navbar className='border-b-2'>
     <Link to='/' className='selft-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>
-      <span className='px-2 py-1 bg-gradient-to-r from-indigo-600 via-purple-400 to-pink-700 rounded-lg text-white'>Blog</span>
-      Here
+      <span className='px-2 py-1 bg-gradient-to-r from-red-400 via-purple-100 to-pink-9000  text-gray-900 rounded-md border-y-2 border-gray'>BlogHere</span>
+      .com
     </Link>
     <form>
    

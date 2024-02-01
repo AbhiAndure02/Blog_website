@@ -45,8 +45,8 @@ export default function SignIn() {
         {/*left size */}
         <div className="flex-1">
         <Link to='/' className=' font-bold dark:text-white text-4xl'>
-      <span className='px-2 py-1 bg-gradient-to-r from-indigo-600 via-purple-400 to-pink-700 rounded-lg text-white '>Blog</span>
-      Here
+      <span className='px-2 py-1 bg-gradient-to-r from-red-400 via-purple-100 to-pink-9000  text-gray-900 rounded-md border-y-2 border-gray-400'>BlogHere</span>
+      .com
     </Link>
   <p className='mt-5 text-sm'>This is a Blog website you can sign in here to access all the blog.
   </p>

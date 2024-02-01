@@ -5,13 +5,13 @@ import React from 'react'
 
 export default function FooterComponent() {
   return (
-   <Footer container className='border border-t-8 border-teal-500'>
+   <Footer container className='border border-t-8 border-teal-900'>
    <div className="w-full max-w-7xl mx-auto">
     <div className="grid w-full justify-between sm:flex ms:grid-cols-1">
       <div className="mt-5">
       <Link to='/' className='selft-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'>
-      <span className='px-2 py-1 bg-gradient-to-r from-indigo-600 via-purple-400 to-pink-700 rounded-lg text-white'>Blog</span>
-      Here
+      <span className='px-2 py-1 bg-gradient-to-r from-red-400 via-purple-100 to-pink-9000  text-gray-900 rounded-md border-y-2 border-gray-400'>BlogHere</span>
+      .com
     </Link>
       </div>
       <div className="grid grid-cols-2 gap-8 mt-4 sm:grid-cols-3 sm:gap-6">
