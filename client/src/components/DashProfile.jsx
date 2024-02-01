@@ -1,7 +1,7 @@
 import { TextInput, Button, Alert, Modal, ModalBody } from 'flowbite-react'
 import React, { useEffect, useRef } from 'react'
 import {useSelector} from 'react-redux'
-
+import {Link} from "react-router-dom"
 import { useState } from 'react'
 import {getDownloadURL, getStorage, ref,  uploadBytesResumable} from 'firebase/storage'
 import {app} from '../firebase'
@@ -28,6 +28,7 @@ export default function DashProfile() {
     const [imgFile, setimgFile] = useState(null);
     const [imgFileUrl, setImgFileUrl] = useState(null);
     const [imgFileProgress, SetimgFileProgress] = useState(null)
+    const [imgFileLoading, setImgFileLoading] = useState(false) 
     const [imgUploadError, SetimgUploadError] = useState(null)
     const [showModel, setShowModel] = useState(false);
     const [updateUserError, setUpdateUserError] = useState(null)
@@ -66,11 +67,13 @@ export default function DashProfile() {
                 SetimgFileProgress(null);
                 setImgFileUrl(null)
                 setimgFile(null)
+                setImgFileLoading(false)
             },
             ()=>{
                 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL)=>{
                     setImgFileUrl(downloadURL)
                     setFormData({ ...formData, profilePicture: downloadURL});
+                    setImgFileLoading(false)
                     })
                 })
             }
@@ -87,7 +90,7 @@ export default function DashProfile() {
             setUpdateUserError('no change made')
             return;
         };
-        if(imgFileProgress){
+        if(imgFileLoading){
             setUpdateUserError('please wait for imae to upload')
             return;
         }
@@ -190,9 +193,21 @@ export default function DashProfile() {
         <TextInput type='text' id='username' placeholder='username' defaultValue={currentUser.username}  onChange={handleChange}/>
         <TextInput type='eamil' id='email' placeholder='email' defaultValue={currentUser.email} onChange={handleChange} />
         <TextInput type='password' id='password' placeholder='password' onChange={handleChange} />
-        <Button type='submit' gradientDuoTone='purpleToBlue' outline>
-            Update
+        <Button type='submit' gradientDuoTone='purpleToBlue' outline disabled={imgFileLoading || loading} >
+            {loading ? 'loading' : 'Update'}
         </Button>
+        {
+            currentUser.isAdmin &&(
+                <Link to={'/create-post'}>
+
+                    <Button 
+                    type='button'
+                    gradientDuoTone='purpleToBlue'
+                   
+                    className='w-full'>Create New Post</Button>
+                </Link>
+            )
+        }
        </form>
        <div className='text-red-500 flex justify-between p-3 mt-5 mb-5'>
         <span className='cursor-pointer md:ml-32 '
