@@ -20,11 +20,11 @@ export default function FooterComponent() {
         <Footer.Title title='About' />
         <Footer.LinkGroup col>
           <Footer.Link
-          href='https://www.google.com'
+          href='https://abhiandureportfolio.netlify.app'
           target ='_blank'
           rel='noopner noreferel'
           >
-            Problem solving
+            Portfolio
           </Footer.Link>
           <Footer.Link
           href='/about'
