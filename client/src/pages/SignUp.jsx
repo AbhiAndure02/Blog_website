@@ -2,6 +2,9 @@ import { Button, Label, TextInput, Alert, Spinner } from 'flowbite-react'
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import OAuth from '../components/OAuth';
+import { HiMail } from 'react-icons/hi';
+import  { TbPassword } from "react-icons/tb";
+
 
 export default function SignUp() {
   const [formData, setFormData] =useState({})
@@ -62,6 +65,7 @@ export default function SignUp() {
               placeholder='Username'
               id='username' 
               onChange={handleChange}
+              addon="@" 
               
                />
             </div>
@@ -73,6 +77,7 @@ export default function SignUp() {
               className='border-b-2 border-gray-700 '
               id='email' 
               onChange={handleChange}
+              addon={<HiMail/>}
               
                />
             </div>
@@ -84,11 +89,12 @@ export default function SignUp() {
               className='border-b-2 border-gray-700 '
               id='password'
               onChange={handleChange}
+              addon = { <TbPassword /> }
               
              
                />
             </div>
-            <Button type='submit' disabled={loading} gradientDuoTone="orangeToBlue"> 
+            <Button type='submit' disabled={loading} color='info'> 
             {
               loading ? (
                 <>

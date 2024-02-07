@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { signInStart, signInFailure, signInSuccess } from '../redux/user/userSlice'
 import OAuth from '../components/OAuth'
+import { HiMail } from 'react-icons/hi';
+import  { TbPassword } from "react-icons/tb";
 
 
 export default function SignIn() {
@@ -58,19 +60,24 @@ export default function SignIn() {
               <Label value='Your email' />
               <TextInput
               type='email'
-              placeholder='Email'
+              className='border-b-2 my-1 bg-gray-700 '
+              placeholder='user@company.com'
               id='email' 
               onChange={handleChange}
+              addon={<HiMail/>}
               
                />
             </div>
             <div className="m-1">
-              <Label value='Your username' />
+              <Label value='Your password' />
               <TextInput
               type='password'
-              placeholder='******'
+              placeholder='password'
+              className='border-b-2 my-1 bg-gray-700 '
               id='password'
               onChange={handleChange}
+              addon = { <TbPassword /> }
+
               
              
                />
