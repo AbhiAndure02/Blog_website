@@ -3,8 +3,8 @@ import CallToAction from '../components/CallToAction'
 
 export default function About() {
   return (
-    <div className="">
-      <div className="flex flex-col gap-10 p-20 w-full max-w-5xl px-4">
+    <div className="w-full">
+      <div className="flex flex-col gap-10 p-20 w-full  px-4">
       <h1 className="p-5 text-3xl lg:text-6xl font-semibold text-center">Welcome to <span className="text-purple-700 font-bold ">BlogHere.com</span> </h1>
       <p className="text-md lg:mx-10 text-gray-500">At BlogHere, we're passionate about exploring the ever-evolving world of technology and its impact on our lives. From the latest gadgets to groundbreaking innovations, we're here to unravel the complexities of the digital age and make technology accessible to everyone. </p>
       <p className='text-gray-500 text-md lg:mx-20'> 

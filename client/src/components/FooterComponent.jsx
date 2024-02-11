@@ -1,6 +1,6 @@
 import { Footer } from 'flowbite-react'
 import { Link } from 'react-router-dom'
-import {BsFacebook, BsInstagram, BsTwitterX, BsGithub, BsImage} from 'react-icons/bs'
+import {BsFacebook, BsInstagram, BsTwitterX, BsGithub, BsImage, BsLinkedin} from 'react-icons/bs'
 import React from 'react'
 
 export default function FooterComponent() {
@@ -47,9 +47,9 @@ export default function FooterComponent() {
            Github
           </Footer.Link>
           <Footer.Link
-          href='#'
+          href=''
           >
-           discord
+           Discord
           </Footer.Link>
         </Footer.LinkGroup>
         </div>
@@ -77,10 +77,12 @@ export default function FooterComponent() {
     <div className='w-full sm:flex sm:items-center sm:justify-between'>
       <Footer.Copyright href='#' by="Abhishek's blog" year={new Date().getFullYear()}/>
       <div className='flex gap-6 mt-5 sm:mt-0 sm:justify-center'>
-        <Footer.Icon href='#' fontSize={10} icon={BsFacebook} />
+        <Footer.Icon target='_blank' rel='noopener noreferrer' href='https://github.com/AbhiAndure02' fontSize={10} icon={BsGithub} />
         <Footer.Icon href='#' fontSize={10} icon={BsInstagram} />
+        <Footer.Icon href='#' fontSize={10} icon={BsLinkedin} />
+        <Footer.Icon href='#' fontSize={10} icon={BsFacebook} />
         <Footer.Icon href='#' fontSize={10} icon={BsTwitterX} />
-        <Footer.Icon href='#' fontSize={10} icon={BsGithub} />
+
       </div>
     </div>
    </div>
