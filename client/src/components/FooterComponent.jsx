@@ -1,6 +1,6 @@
 import { Footer } from 'flowbite-react'
 import { Link } from 'react-router-dom'
-import {BsFacebook, BsInstagram, BsTwitterX, BsGithub, BsImage, BsLinkedin} from 'react-icons/bs'
+import {BsFacebook, BsInstagram, BsTwitterX, BsGithub, BsImage, BsLinkedin, BsDiscord} from 'react-icons/bs'
 import React from 'react'
 
 export default function FooterComponent() {
@@ -47,7 +47,9 @@ export default function FooterComponent() {
            Github
           </Footer.Link>
           <Footer.Link
-          href=''
+          target='_blank'
+          rel='noopner noreferrer'
+          href='https://discord.com/channels/1206130811393540126/1206130811393540129'
           >
            Discord
           </Footer.Link>
@@ -78,10 +80,11 @@ export default function FooterComponent() {
       <Footer.Copyright href='#' by="Abhishek's blog" year={new Date().getFullYear()}/>
       <div className='flex gap-6 mt-5 sm:mt-0 sm:justify-center'>
         <Footer.Icon target='_blank' rel='noopener noreferrer' href='https://github.com/AbhiAndure02' fontSize={10} icon={BsGithub} />
-        <Footer.Icon href='#' fontSize={10} icon={BsInstagram} />
-        <Footer.Icon href='#' fontSize={10} icon={BsLinkedin} />
-        <Footer.Icon href='#' fontSize={10} icon={BsFacebook} />
-        <Footer.Icon href='#' fontSize={10} icon={BsTwitterX} />
+        <Footer.Icon className='text-pink-400' href='https://www.instagram.com/i__am__abhi__/' target='_blank' rel='noopener noreferrer' fontSize={10} icon={BsInstagram} />
+        <Footer.Icon className='text-blue-800' href='https://www.linkedin.com/in/abhishek-andure-228567228?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' target='_blank' rel='noopener noreferrer' fontSize={10} icon={BsLinkedin} />
+        <Footer.Icon className='text-blue-500 cursor-pointer' href='https://www.facebook.com/' target='_blank' rel='noopener noreferrer' fontSize={10} icon={BsFacebook} />
+        <Footer.Icon className='text-black' href='https://x.com/aa_abhiandure2?t=uup8Wth05t6ugfLpr7oCzg&s=08' target='_blank' rel='noopener noreferrer' fontSize={10} icon={BsTwitterX} />
+        <Footer.Icon className='text-black w-10 h-10 rounded-full' href='https://discord.com/channels/1206130811393540126/1206130811393540129' target='_blank' rel='noopener noreferrer' fontSize={10} icon={BsDiscord}/>
 
       </div>
     </div>
