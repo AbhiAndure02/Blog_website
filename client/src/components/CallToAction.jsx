@@ -5,7 +5,7 @@ export default function CallToAction() {
     <div className='flex flex-col sm:flex-row p-3 border border-teal-500 justify-center items-center rounded-tl-3xl rounded-br-3xl text-center'>
         <div className="flex-1 justify-center flex flex-col">
             <h2 className='text-2xl'>
-               java Top 100 DSA Quetion
+               Java Top 100 DSA Quetion
             </h2>
             <p className='text-gray-500 my-2'>
                 Checkout these resources with 100 Java question of basic topic

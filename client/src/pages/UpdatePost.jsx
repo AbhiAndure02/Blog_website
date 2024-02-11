@@ -137,6 +137,7 @@ export default function UpdatePost() {
             <option value='tailwind'>Tailwind css</option>
             <option value='nodejs'>Node js</option>
             <option value='mongo db'>Mongo Db</option>
+            <option value='java'>Java</option>
           </Select>
         </div>
         <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>

@@ -1,4 +1,3 @@
-import { Button } from 'flowbite-react'
 import React from 'react'
 import { AiFillGoogleCircle } from 'react-icons/ai'
 import {GoogleAuthProvider, signInWithPopup, getAuth} from 'firebase/auth'
@@ -38,9 +37,11 @@ export default function OAuth() {
         }
     }
   return (
-    <Button type='button' outline color='blue' onClick={handleGoogleClick}>
-        <AiFillGoogleCircle className='w-5 h-5 mr-2 text-orange-200'/>
-        <p>continue  with Google</p>
-    </Button>
+    <button onClick={handleGoogleClick} type="button" className="w-full text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-2xl text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 me-2 mb-2 ">
+        <AiFillGoogleCircle className='mr-5 text-2xl' />
+<path fill-rule="evenodd" d="M8.842 18.083a8.8 8.8 0 0 1-8.65-8.948 8.841 8.841 0 0 1 8.8-8.652h.153a8.464 8.464 0 0 1 5.7 2.257l-2.193 2.038A5.27 5.27 0 0 0 9.09 3.4a5.882 5.882 0 0 0-.2 11.76h.124a5.091 5.091 0 0 0 5.248-4.057L14.3 11H9V8h8.34c.066.543.095 1.09.088 1.636-.086 5.053-3.463 8.449-8.4 8.449l-.186-.002Z" clip-rule="evenodd"/>
+
+Sign in with Google
+</button>
   )
 }

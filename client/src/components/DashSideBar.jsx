@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import {HiArrowSmRight, HiDocumentText, HiOutlineUserGroup, HiUser} from 'react-icons/hi'
+import {HiAnnotation, HiArrowSmRight, HiChartPie, HiDocumentText, HiOutlineUserGroup, HiUser} from 'react-icons/hi'
 import {Sidebar} from 'flowbite-react'
 import { Link, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -39,7 +39,22 @@ export default function DashSideBar() {
   return (
     <Sidebar className='w-full md:w-56'>
         <Sidebar.Items>
+       
+
+        
             <Sidebar.ItemGroup className='flex flex-col gap-2'>
+
+            {
+                    currentUser.isAdmin &&(
+                        <Link to='/dashboard?tab=dashboardcom'>
+                        <Sidebar.Item 
+                        active={tab==='dashboardcom'} 
+                        icon ={HiChartPie} labelColor='dark' as='div' >
+                            Dashboard
+                        </Sidebar.Item>
+                        </Link>
+                    )
+                }
                 <Link to='/dashboard?tab=profile'>
                 <Sidebar.Item active={tab==='profile'} 
                 icon ={HiUser} 
@@ -65,6 +80,17 @@ export default function DashSideBar() {
                         active={tab==='users'} 
                         icon ={HiOutlineUserGroup} labelColor='dark' as='div' >
                             Usres
+                        </Sidebar.Item>
+                        </Link>
+                    )
+                }
+                {
+                    currentUser.isAdmin &&(
+                        <Link to='/dashboard?tab=comments'>
+                        <Sidebar.Item 
+                        active={tab==='comments'} 
+                        icon ={HiAnnotation} labelColor='dark' as='div' >
+                            Comments
                         </Sidebar.Item>
                         </Link>
                     )

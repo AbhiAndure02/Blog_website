@@ -55,13 +55,13 @@ export default function SignIn() {
         </div>
         {/* right side */}
         <div className="flex-1">
-          <form className='flex flex-col gap-5 m-3 ' onSubmit={handleSubmit}>
+          <form className='flex flex-col gap-3 m-3 ' onSubmit={handleSubmit}>
             <div className="m-1">
               <Label value='Your email' />
               <TextInput
               type='email'
-              className='border-b-2 my-1 bg-gray-700 '
-              placeholder='user@company.com'
+              className='border-b-2 my-1 '
+              placeholder='Username'
               id='email' 
               onChange={handleChange}
               addon={<HiMail/>}
@@ -72,8 +72,8 @@ export default function SignIn() {
               <Label value='Your password' />
               <TextInput
               type='password'
-              placeholder='password'
-              className='border-b-2 my-1 bg-gray-700 '
+              placeholder='Password'
+              className='border-b-2 my-1 '
               id='password'
               onChange={handleChange}
               addon = { <TbPassword /> }
@@ -82,7 +82,7 @@ export default function SignIn() {
              
                />
             </div>
-            <Button type='submit' disabled={loading}> 
+            <Button className='text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 text-center me-2 mb-2' type='submit' disabled={loading}> 
             {
               loading ? (
                 <>
@@ -94,6 +94,7 @@ export default function SignIn() {
             }
             </Button>
             <OAuth />
+            
           </form>
           <div className="mx-5 flex gap-3 text-sm">
             <span>Don't have an accoun?t</span>
